@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .all-center {
+        @apply flex items-center justify-center
+    }
+}
+
+@font-face {
+    font-family: "Alien Encounters Solid";
+    src: url(font/snake.TTF);
+    font-weight: bold;
+}
+
+body {
+    font-family: "Alien Encounters Solid", serif;
+    font-weight: bold;
+}
+
+/*Game Image bg*/
+
+.game {
+    background: url("../public/pix/bkg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Home View Bg-Image-*/
+.background-image {
+    background: url("../public/pix/game-background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.scale-enter-active,
+.scale-leave-active {
+    transition: all 200ms linear;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+    scale: 1;
+}
+
+.popup-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+.popup-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
